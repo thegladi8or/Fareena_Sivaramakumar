@@ -1,0 +1,1 @@
+      PID        ID       DAD       MOM       SEX    LOC_01    LOC_02    ENV_01      PHEN       AFF     z_AFF 	

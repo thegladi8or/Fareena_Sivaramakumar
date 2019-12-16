@@ -1,0 +1,61 @@
+# ------------------------------------------------------------------------------
+# Begin File: ./cgmp_root_021404-151542_B/MP/N/EXT/RAND/MP/MP_N_EXT_RAND_MP_assoc.par
+# ------------------------------------------------------------------------------
+# **************************************************************************** #
+# ***************               PEDIGREE BLOCK                 *************** #
+# **************************************************************************** #
+pedigree, character {                                                           
+   # ---------------------------------------------------------------------------
+   # General specifications                                                     
+   # ---------------------------------------------------------------------------
+   delimiters               = "\t "                                          
+   delimiter_mode           = multiple                                          
+   individual_missing_value = -1                                                
+   sex_code, male           = m                                                 
+   sex_code, female         = f                                                 
+   sex_code, missing        = 0                                                 
+                                                                                
+   # ---------------------------------------------------------------------------
+   # Individual & Family Field specifications                                   
+   # ---------------------------------------------------------------------------
+   pedigree_id   = PID                                                          
+   individual_id = ID                                                           
+   parent_id     = DAD                                                          
+   parent_id     = MOM                                                          
+   sex_field     = SEX                                                          
+                                                                                
+   # ---------------------------------------------------------------------------
+   # Phenotype, Trait & Covariate Field specifications                          
+   # ---------------------------------------------------------------------------
+   marker    = LOC_01, delimiter = /,   name = LOC_01    , missing = -1         
+   marker    = LOC_02, delimiter = /,   name = LOC_02    , missing = -1         
+   covariate = COV_01                                    , missing = -1         
+   covariate = COV_02                                    , missing = -1         
+   covariate = ENV_01                                    , missing = -1         
+   phenotype = PHEN                                      , missing = -1         
+   phenotype = AFF, binary, affected = 1, unaffected = 0 , missing = -1         
+   phenotype = z_AFF, binary, affected = 1, unaffected = 0 , missing = -1         
+   covariate = IsProband, binary, affected = 1, unaffected =0 , missing = -1    
+}                                                                               
+                                                                                
+# **************************************************************************** #
+# ***************               FUNCTION BLOCK                 *************** #
+# **************************************************************************** #
+function {                                                                      
+   covariate = addLOC_01, expression = "add(LOC_01, 'A1')"                    
+}                                                                               
+# **************************************************************************** #
+# ***************                 ASSOC BLOCK                  *************** #
+# **************************************************************************** #
+assoc, out = ".//cgmp_root_021404-151542_B//MP//N//EXT//RAND//MP//MP_N_EXT_RAND_MP_0010_assoc.out" {    
+   # Analysis Model:  MP 
+   family_effect    = false 
+   marital_effect   = true 
+   sibship_effect   = false 
+   polygenic_effect = true 
+   trait            = z_AFF, binary 
+   covariate        = addLOC_01, test                                           
+}                                                                               
+# ------------------------------------------------------------------------------
+# End File: ./cgmp_root_021404-151542_B/MP/N/EXT/RAND/MP/MP_N_EXT_RAND_MP_assoc.par
+# ------------------------------------------------------------------------------

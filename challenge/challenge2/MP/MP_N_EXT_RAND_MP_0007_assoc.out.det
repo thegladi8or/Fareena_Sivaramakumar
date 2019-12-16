@@ -1,0 +1,170 @@
+================================================================================
+                              MODEL DESCRIPTION                                 
+================================================================================
+
+Title:            Analysis1
+
+Primary Trait:    z_AFF (Binary)
+
+
+
+Test Variable:    addLOC_01 (Mean = 0.4)
+
+
+No transformation is applied.
+
+================================================================================
+                                   RESULTS                                      
+================================================================================
+
+                     Without Test Covariates, Final total variance unrestricted
+
+    Parameter     Estimate         S.E.         P-value         Deriv
+
+Variance components
+    Polygenic     0.022158       0.008276        0.00371       0.000000
+      Marital     0.017006       0.009332        0.03420      -0.000000
+       Random     0.046474       0.012005        0.00005       0.000000
+
+Coefficients
+    Intercept    -2.240174       0.194437    < 0.0000001       0.000000
+
+Other parameters
+   Total var.     0.085639       0.013504    < 0.0000001       0.000000
+ Heritability     0.258742       0.072290        0.00034       0.000000
+
+Final ln(likelihood): -86.326495
+
+                     With Test Covariates, Final total variance unrestricted
+
+    Parameter     Estimate         S.E.         P-value         Deriv
+
+Variance components
+    Polygenic     0.020884       0.008110        0.00501       0.000091
+      Marital     0.017075       0.009351        0.03393       0.017124
+       Random     0.047134       0.011898        0.00004      -0.000010
+
+Coefficients
+    Intercept    -2.246715       0.194414    < 0.0000001       0.000000
+    addLOC_01     0.338167       0.219397        0.12323       0.000000
+
+Other parameters
+   Total var.     0.085093       0.013320    < 0.0000001       0.017857
+ Heritability     0.245426       0.072662        0.00073       0.016192
+
+Final ln(likelihood): -85.264333
+
+                     Without Test Covariates, Final total variance restricted to 1.0
+
+    Parameter     Estimate         S.E.         P-value         Deriv
+
+Variance components
+    Polygenic     0.482544            INF    Unavailable       0.000000
+      Marital     0.517456            INF    Unavailable      -0.000075
+       Random     0.000000            INF    Unavailable       0.000000
+
+Coefficients
+    Intercept    -2.171000       0.719467        0.00255       0.000000
+
+Other parameters
+   Total var.     1.000000            INF    Unavailable      76.114802
+ Heritability     0.482544            INF    Unavailable      64.440827
+
+Final ln(likelihood): -446.069164
+
+                     With Test Covariates, Final total variance restricted to 1.0
+
+    Parameter     Estimate         S.E.         P-value         Deriv
+
+Variance components
+    Polygenic     0.482544            INF    Unavailable       0.000000
+      Marital     0.517456            INF    Unavailable       0.000000
+       Random     0.000000            INF    Unavailable       0.000000
+
+Coefficients
+    Intercept    -2.175302            INF    Unavailable       0.000000
+    addLOC_01     0.292559            INF    Unavailable       0.000000
+
+Other parameters
+   Total var.     1.000000            INF    Unavailable       0.000000
+ Heritability     0.482544            INF    Unavailable       0.000000
+
+Final ln(likelihood): -445.981241
+
+================================================================================
+                                  JOINT TEST                                    
+================================================================================
+
+H0 (final total variance unrestricted, without test covariates) ln(likelihood):    -86.326495
+H1 (final total variance unrestricted, with    test covariates) ln(likelihood):    -85.264333
+
+-2 [ln(likelihood H0) - ln(likelihood H1)] :       2.124323
+P-value                                    :       0.144977
+
+================================================================================
+                                  JOINT TEST                                    
+================================================================================
+
+H0 (final total variance restricted to 1.0, without test covariates) ln(likelihood):    -446.069164
+H1 (final total variance restricted to 1.0, with    test covariates) ln(likelihood):    -445.981241
+
+-2 [ln(likelihood H0) - ln(likelihood H1)] :       0.175845
+P-value                                    :       0.674968
+
+================================================================================
+                                  JOINT TEST                                    
+================================================================================
+
+H0 (final total variance unrestricted, without test covariates) ln(likelihood):    -86.326495
+H1 (final total variance restricted to 1.0, without test covariates) ln(likelihood):    -446.069164
+
+-2 [ln(likelihood H0) - ln(likelihood H1)] :       -719.485338
+P-value                                    :       0.000000
+
+================================================================================
+                                  JOINT TEST                                    
+================================================================================
+
+H0 (final total variance unrestricted, with    test covariates) ln(likelihood):    -85.264333
+H1 (final total variance restricted to 1.0, with    test covariates) ln(likelihood):    -445.981241
+
+-2 [ln(likelihood H0) - ln(likelihood H1)] :       -721.433816
+P-value                                    :       0.000000
+
+================================================================================
+              VARIANCE-COVARIANCE MATRIX WITHOUT TEST COVARIATES, FINAL TOTAL VARIANCE UNRESTRICTED
+================================================================================
+
+                Total var.  Heritability       Marital     Polygenic        Random     Intercept
+  Total var.      0.000182      0.000405      0.000100      0.000082     -0.000147      0.000177
+      Herit.      0.000405      0.005226     -0.000147      0.000552     -0.000279     -0.000245
+     Marital      0.000100     -0.000147      0.000087      0.000013     -0.000085      0.000152
+   Polygenic      0.000082      0.000552      0.000013      0.000068     -0.000062      0.000025
+      Random     -0.000147     -0.000279     -0.000085     -0.000062      0.000144     -0.000160
+   Intercept      0.000177     -0.000245      0.000152      0.000025     -0.000160      0.037806
+
+================================================================================
+              VARIANCE-COVARIANCE MATRIX WITH TEST COVARIATES, FINAL TOTAL VARIANCE UNRESTRICTED
+================================================================================
+
+                Total var.  Heritability       Marital     Polygenic        Random     Intercept     addLOC_01
+  Total var.      0.000177      0.000403      0.000100      0.000078     -0.000144      0.000187     -0.000175
+      Herit.      0.000403      0.005280     -0.000145      0.000548     -0.000284     -0.000103     -0.001230
+     Marital      0.000100     -0.000145      0.000087      0.000012     -0.000084      0.000150     -0.000027
+   Polygenic      0.000078      0.000548      0.000012      0.000066     -0.000059      0.000037     -0.000148
+      Random     -0.000144     -0.000284     -0.000084     -0.000059      0.000142     -0.000168      0.000149
+   Intercept      0.000187     -0.000103      0.000150      0.000037     -0.000168      0.037797     -0.010758
+   addLOC_01     -0.000175     -0.001230     -0.000027     -0.000148      0.000149     -0.010758      0.048135
+
+================================================================================
+              VARIANCE-COVARIANCE MATRIX WITHOUT TEST COVARIATES, FINAL TOTAL VARIANCE RESTRICTED TO 1.0
+================================================================================
+
+The variance-covariance matrix is not available. 
+
+================================================================================
+              VARIANCE-COVARIANCE MATRIX WITH TEST COVARIATES, FINAL TOTAL VARIANCE RESTRICTED TO 1.0
+================================================================================
+
+The variance-covariance matrix is not available. 
+

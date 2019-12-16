@@ -1,0 +1,66 @@
+================================================================================
+                              MODEL DESCRIPTION                                 
+================================================================================
+
+Title:            Analysis1
+
+Primary Trait:    z_AFF (Binary)
+
+
+
+Test Variable:    addLOC_01 (Mean = 0.344)
+
+
+No transformation is applied.
+
+================================================================================
+                                   RESULTS                                      
+================================================================================
+
+                     Without Test Covariates, Final total variance unrestricted
+
+    Parameter     Estimate         S.E.         P-value
+
+Variance components
+    Polygenic     0.013759       0.007420        0.03185
+      Marital     0.000000       Converged at a bound
+       Random     0.094706       0.008899    < 0.0000001
+
+Coefficients
+    Intercept    -1.954152       0.153251    < 0.0000001
+
+Other parameters
+   Total var.     0.108465       0.007420    < 0.0000001
+ Heritability     0.126852       0.059732        0.03369
+
+Final ln(likelihood): -152.338233
+
+                     With Test Covariates, Final total variance unrestricted
+
+    Parameter     Estimate         S.E.         P-value
+
+Variance components
+    Polygenic     0.013696       0.007422        0.03248
+      Marital     0.000000       Converged near bound
+       Random     0.094746       0.008904    < 0.0000001
+
+Coefficients
+    Intercept    -1.954734       0.153436    < 0.0000001
+    addLOC_01    -0.076007       0.290633        0.79369
+
+Other parameters
+   Total var.     0.108442       0.007422    < 0.0000001
+ Heritability     0.126301       0.059794        0.03467
+
+Final ln(likelihood): -152.302460
+
+================================================================================
+                                  JOINT TEST                                    
+================================================================================
+
+H0 (final total variance unrestricted, without test covariates) ln(likelihood):    -152.338233
+H1 (final total variance unrestricted, with    test covariates) ln(likelihood):    -152.302460
+
+-2 [ln(likelihood H0) - ln(likelihood H1)] :       0.071546
+P-value                                    :       0.789100
+
